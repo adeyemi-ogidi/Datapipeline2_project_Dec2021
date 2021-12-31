@@ -1,10 +1,12 @@
 # Datapipeline2_project_Dec2021
 This is the project assignment for Data-pipeline 2 course at DSTI.
 
+The aim of this project is to extract the data in a given Brazilian public dataset called olist. From one of the csv files, we used the olist_orders_dataset to get a list of customers whose deliveries were delayed by more than 10 days for a possible compensation, determined by the company.
+
 
 # Exercise with olist dataset, extract deliveries of more than 10 days
 
-Clone the project:  
+**Clone the project:**  
 ```git clone https://github.com/adeyemi-ogidi/Datapipeline2_project_Dec2021.git```
 
 
@@ -15,14 +17,14 @@ For the project , the following assumptions were made regarding the timestamp co
 3. All timestamps were converted to UTC
 
 
-# Download Spark and othe dependecies
+## Download Spark and othe dependecies
 To setup the development environment, perform the following:
 1. Download Spark from Spark.apache.org 
 2. Create SPARK_HOME and HADOOP_HOME in environment variables and also add the corresponding Spark files to path
 3. Download wintuls and hadoop dll and add to HADOOP_HOME and System32 respectively
 
 
-# Start Spark shell
+## Start Spark shell
 ```Start Scala by running spark-shell from command line terminal```
 
 
@@ -35,7 +37,7 @@ Then unzip the archive.zip into the already created folder path
 unzip archive.zip
 ```
 
-## submitting through terminal
+## Submitting through terminal
 ```
 spark-shell -i  myscalaProject.scala
 ```
@@ -75,7 +77,7 @@ extractDeliveriesMoreThan10Days.show
 
 
 ## Sanity check:
-verify we have no delivery of less than 10 days, should definetely return no result:
+verify we have no delivery of less than 10 days, this should definetely return no result:
 ```
 extractDeliveriesMoreThan10Days.filter(col("delivery_delay_in_days") <= 10).show
 ```

@@ -17,7 +17,7 @@ For the project , the following assumptions were made regarding the timestamp co
 3. All timestamps were converted to UTC
 
 
-## Download Spark and othe dependecies
+## Download Spark and other dependencies
 To setup the development environment, perform the following:
 1. Download Spark from Spark.apache.org 
 2. Create SPARK_HOME and HADOOP_HOME in environment variables and also add the corresponding Spark files to path

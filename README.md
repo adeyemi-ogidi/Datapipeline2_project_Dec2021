@@ -30,7 +30,7 @@ To setup the development environment, perform the following:
 
 ## How to download the data
 
-Go to https://www.kaggle.com/olistbr/brazilian-ecommerce and download the zip file. 
+Go to https://www.kaggle.com/olistbr/brazilian-ecommerce and download the zip file.   
 
 Then unzip the archive.zip into the already created folder path
 ```
@@ -88,3 +88,16 @@ For submission, we can extract the file as a csv file using the following code l
 extractDeliveriesMoreThan10Days.coalesce(1).write.option("header", "true").csv(""delivery_delay_in_days.csv")
 ```
 
+## Running this project on AWS
+This task was executed using the local machine. However it can similarly be executed using to major services on AWS
+1. AWS S3 which is an object based storage for storing the data
+2. AWS Elastic MapReduce, a service for big data processing.
+
+## Suuggested steps:
+1. Create an S3 bucket in a region that is closest to you to address latency possibilities
+2. Create a bucket in S3, and within the bucket, created a folder and name it appropriately
+3. Upload the dataset as well as corresponding jar files.
+4. From the AWS EMR console, create a cluster and select Spark application
+5. Select the folder path in S3 where the folders are.
+6. Configure other settings such as system resource requirement
+7. From S3 console, connect to the EMR 
